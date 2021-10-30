@@ -1,0 +1,86 @@
+let answer = 'blank'
+
+//let input = prompt("Please enter yes or no")
+/*
+if(input === 'yes'){
+  answer = 'you entered yes'
+}if (input === 'no'){
+  answer = 'you entered no'
+}if (input === 'bast'){
+  answer = 'a beautiful cat'
+}if (input === 'chippy'){
+  answer = 'chippy screams all the time'
+}if (input === 'spring'){
+  answer = 'There will be a lot of flowers and trees.'
+}
+
+
+
+//console.log(`The variable 'input' is: ${input}`)
+//console.log(`The variable 'answer' is: ${answer}`
+
+// get an input, look at that input, and do something to a DIFFERENT variable 
+// with an if statement
+*/
+
+
+
+//This function will make a random number between one and (max), you pick the number!
+// example:  getRandomInt(50) will be a random number from 1 to 50
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function playGame(){
+  //first, I ask you what the biggest number you want 
+  question = parseInt(prompt("What is the biggest number you want?"))
+  //then, I show you what number you entered
+  console.log(`The value of the variable 'question' is: ${question}`)
+
+//these two lines run the random number generator twice, once for Mimi and once for Denny
+  let mimiNumber = getRandomInt(question)
+  let dennyNumber = getRandomInt(question)
+
+//these two lines show you what the numbers actually are. 
+// unless you console.log() them, you'll never know
+  console.log(`Denny's number is: ${dennyNumber}`)
+  console.log(`Mimi's number is: ${mimiNumber}`)
+
+  //these if statements compare the two numbers and figure out who won!!
+  if (mimiNumber > dennyNumber){
+  console.log("Mimi wins!!")
+} if (mimiNumber < dennyNumber){
+  console.log("Denny wins!")
+}
+if (mimiNumber === dennyNumber){
+  console.log("Tie!!")
+}
+}
+
+playGame()
+
+
+
+/*
+let dennyInput = 0
+let mimiInput = 0
+
+while(dennyInput === 0){
+  question = prompt("please enter a number for denny")
+  dennyInput = question
+}
+while (mimiInput === 0){
+  question = prompt("Please enter a number for MImi")
+  mimiInput = question
+}
+console.log(`Denny picked: ${dennyInput}`)
+console.log(`Mimi picked: ${mimiInput}`)
+if (mimiInput > dennyInput){
+  console.log("Mini wins!!")
+}if (mimiInput < dennyInput){
+  console.log("Denny wins!")
+}
+else {
+  console.log("Tie")
+}
+*/
